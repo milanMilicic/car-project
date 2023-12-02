@@ -1,8 +1,13 @@
+import './style.scss'
+import Navigation from './components/Navigation/Navigation';
+
 function App() {
   return (
-    <div>
-      
-    </div>
+    <>
+      <div className='container'>
+        <Navigation />
+      </div>
+    </>
   );
 }
 

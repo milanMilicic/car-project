@@ -22,12 +22,12 @@ function Navigation() {
                 </div>
                 <div className='navigation-links'>
                     <ul>
-                        <li><Link onClick={toggleOverlay} to='/'>Home</Link></li>
-                        <li><Link onClick={toggleOverlay} to='/about'>About</Link></li>
-                        <li><Link onClick={toggleOverlay} to='/vehicle-models'>Vehicle Models</Link></li>
-                        <li><Link onClick={toggleOverlay} to='/testimonials'>Testimonials</Link></li>
-                        <li><Link onClick={toggleOverlay} to='/our-team'>Our Team</Link></li>
-                        <li><Link onClick={toggleOverlay} to='/contact'>Contact</Link></li>
+                        <li><Link to='/'>Home</Link></li>
+                        <li><Link to='/about'>About</Link></li>
+                        <li><Link to='/vehicle-models'>Vehicle Models</Link></li>
+                        <li><Link to='/testimonials'>Testimonials</Link></li>
+                        <li><Link to='/our-team'>Our Team</Link></li>
+                        <li><Link to='/contact'>Contact</Link></li>
                     </ul>
                 </div>
                 <div className='menu-buttons'>

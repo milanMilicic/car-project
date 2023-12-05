@@ -1,0 +1,88 @@
+$theme-color: #ff5035;
+
+#book-section {
+    background: linear-gradient(180deg, #f8f8f8, white);
+    padding: 1rem 0;
+    
+
+    .book-container {
+        background-image: url('../../images/book-car/book-bg.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: white;
+        border-radius: 5px;
+        padding: 3rem;
+        box-shadow: 0 10px 15px 0 rgba(92, 88, 88, 0.719);
+
+
+        h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+
+            .select-title {
+                display: flex;
+                align-items: center;
+                font-size: 1.2rem;
+                font-weight: bold;
+                margin-bottom: 0.5rem;
+
+                span {
+                    color: $theme-color;
+                }
+            }
+
+            select {
+                width: 100%;
+                padding: 0.5rem;
+                color: gray;
+                font-weight: bold;
+                border-radius: 5px;
+                border: 1px solid rgb(219, 216, 216);
+                outline: none;
+            }
+
+            input {
+                width: 100%;
+                padding: 0.5rem;
+                color: gray;
+                font-weight: bold;
+                border-radius: 5px;
+                border: 1px solid rgb(219, 216, 216);
+                outline: none;
+            }
+
+            #search {
+                background-color: $theme-color;
+                color: white;
+                font-weight: bold;
+                font-size: 1.2rem;
+                text-align: center;
+                border: none;
+                align-self: end;
+                padding: 0.4rem;
+                border-radius: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    box-shadow: 0 10px 15px 0 rgba(197, 50, 20, 0.719);
+                    background-color: #f1472d;
+                }
+            }
+
+            @media(max-width: 1000px){
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @media(max-width: 650px){
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}

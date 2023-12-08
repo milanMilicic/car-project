@@ -8,6 +8,8 @@ import golf from '../../images/cars-big/golf6.jpg'
 import passat from '../../images/cars-big/passatcc.jpg'
 import toyota from '../../images/cars-big/toyotacamry.jpg'
 import { useState } from 'react'
+import 'react-toastify/dist/ReactToastify.css'; //
+import { toast } from 'react-toastify';
 
 function Book() {
     const [carType, setCarType] = useState('');
@@ -17,6 +19,7 @@ function Book() {
     const [dropOffDate, setDropOffDate] = useState('');
 
     const [errorMessage, setErrorMessage] = useState(false);
+    const [activeClass, setActiveClass] = useState(false);
 
     let img;
 
@@ -42,42 +45,68 @@ function Book() {
         default:
             img = audi;
     }
-    /* nasatvi dalje sa logikom za modal */
+
+    const submitFormModal = (e) => {
+        e.preventDefault();
+
+        if(errorMessage){
+            setErrorMessage(false);
+        }
+
+        setActiveClass(false);
+        toast.success("Reservation Complete");
+
+        document.getElementsByTagName('body')[0].style.removeProperty('overflow-y');
+    }
 
 
     const checkFields = (e) => {
-        console.log(123);
         e.preventDefault();
 
         if(carType === 'default' || carType === ''){
             setErrorMessage(true);
+            return;
         }
 
         if(pickUpLocation === 'default' || pickUpLocation === ''){
             setErrorMessage(true);
+            return;
         }
 
         if(dropOffLocation === 'default' || dropOffLocation === ''){
             setErrorMessage(true);
+            return;
         }
 
         if(pickUpDate === ''){
             setErrorMessage(true);
+            return;
         }
 
         if(dropOffDate === ''){
             setErrorMessage(true);
+            return;
         }
+
+        setActiveClass(true);
+        document.getElementsByTagName('body')[0].style.overflowY = 'hidden';
+
     }
 
   return (
     <section id="book-section">
-        {/* modal */}
 
-        <div className='modal-container'>
+        {/* modal-overlay */}
+        <div className={`modal-overlay ${activeClass ? 'active' : ''}`}></div>
+
+        {/* modal */}
+        <div className={`modal-container ${activeClass ? 'active' : ''}`}>
                     <div className='modal-title'>
                         <h3>COMPLETE RESERVATION</h3>
-                        <FaXmark id='close-icon-modal' size={25}/>
+                        <FaXmark onClick={() => {
+                            setActiveClass(false);
+                            document.getElementsByTagName('body')[0].style.removeProperty('overflow-y');
+                        }} id='close-icon-modal' size={25}/>
                     </div>
                     <div className='modal-info-message'>
                         <p><FaCircleInfo /> Upon completing this reservation enquiry, you will receive:</p>
@@ -132,7 +161,7 @@ function Book() {
                     </div>
                     <div className='personal-information'>
                         <h4>Personal Information</h4>
-                        <form id="modal-form">
+                        <form onSubmit={submitFormModal} id="modal-form">
                             <div className='input-fields'>
                                 <label htmlFor="firstName">First Name <span>*</span></label>
                                 <input placeholder='Enter Your First Name' type="text" id='firstName'/>
@@ -182,6 +211,8 @@ function Book() {
                         </form>
                     </div>
                 </div>
+        
+        {/* form */}
 
         <div className="container">
             <div className="book-container">

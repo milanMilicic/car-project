@@ -1,0 +1,175 @@
+$theme-color: #ff5035;
+
+#models-section {
+    margin-top: 7rem;
+
+    .models-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .models-title {
+        text-align: center;
+        max-width: 50rem;
+        margin: 0px auto;
+        padding: 0 2rem 2rem 2rem;
+
+        h5 {
+            font-size: 1.5rem;
+
+            @media(max-width: 800px){
+                font-size: 1rem;
+            }
+        }
+
+        h3 {
+            font-size: 3.5rem;
+
+            @media(max-width: 800px){
+                font-size: 2.2rem;
+            }
+        }
+
+        p {
+            color: rgb(92, 90, 90);
+        }
+    }
+
+    .models-main {
+        padding: 2rem;
+        display: flex;
+        justify-content: space-between;
+
+        .model-name-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+
+            .model-name {
+                background-color: #e9e9e9;
+                color: black;
+                font-size: 1.3rem;
+                font-weight: bold;
+                padding: 1.1rem;
+                padding-left: 1rem;
+                cursor: pointer;
+                transition: all 0.2s;
+
+                &:hover {
+                    background-color: $theme-color;
+                    color: white;
+                }
+
+                @media(max-width: 800px){
+                    padding: 0.5rem;
+                }
+
+            }
+
+            .active-model-name {
+                background-color: $theme-color;
+                color: white;
+            }
+        }
+
+        .img-table-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8rem;
+
+            #img-wrapper {
+                max-width: 30rem;
+                
+                img {
+                    width: 100%;
+                }
+
+                @media(max-width: 1000px){
+                    max-width: 100%;
+                }
+
+                @media(max-width: 800px){
+                    max-width: 20rem;
+                }
+    
+            }
+
+            .table-wrapper {
+                display: flex;
+                flex-direction: column;
+                width: 15rem;
+                gap: 1rem;
+    
+                .table {
+    
+                    .table-title {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        font-size: 1.2rem;
+                        background-color: $theme-color;
+                        border: 1px solid $theme-color;
+                        color: white;
+                        padding: 0.3rem 1rem;
+    
+                        span:first-child {
+                            font-size: 2rem;
+                            font-weight: bold;
+                        }
+                    }
+    
+                    .table-row {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        text-align: center;
+                        padding: 0.5rem;
+                        border: 2px solid rgb(128, 121, 121);
+                        border-top: none;
+                        transition: all 0.3s;
+    
+                        p{
+                            cursor: default;
+                        }
+                        
+                        p:first-child {
+                            border-right: 2px solid rgb(128, 121, 121);
+                        }
+                    }
+                }
+    
+                .reserve-now-button {
+                    text-align: center;
+                    background-color: $theme-color;
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                    color: white;
+                    padding: 0.5rem 1rem;
+                    box-shadow: 7px 7px 0 #efe9e9;
+                    cursor: pointer;
+    
+                    &:hover {
+                        background-color: #f1472d;
+                    }
+                }
+                
+            }
+
+            @media(max-width: 1200px){
+                gap: 1rem;
+            }
+
+            @media(max-width: 800px){
+                flex-direction: column;
+                gap: 3rem;
+            }
+
+        }
+
+        @media(max-width: 1050px){
+            flex-direction: column;
+            gap: 2rem;
+        }
+    }
+
+}

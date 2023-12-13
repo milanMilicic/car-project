@@ -48,7 +48,7 @@ function Testimonials() {
                     </swiper-slide>
                     <swiper-slide>
                         <div className='testimonials-text-wrapper'>
-                            <p>"We rented a car from this website and had an amazing experience! The booking was easy and the rental rates were very affordable. We rented a car from this website and had an amazing experience! The booking was easy and the rental rates were very affordable."</p>
+                            <p>"We rented a car from this website and had an amazing experience! The booking was easy and the rental rates were very affordable."</p>
                             <div className='testimonials-img-wrapper'>
                                 <div className='img-name'>
                                     <img src={pfp3} alt="" />

@@ -44,12 +44,16 @@
                 flex-direction: column;
                 align-items: center;
                 padding: 3rem;
-                text-align: center;
+                
 
                 & > p {
                     font-size: 1.3rem;
                     font-weight: bolder;
-                    text-align: left;
+                    text-align: center;
+
+                    @media(max-width: 500px){
+                        text-align: left;
+                    } 
                 }
 
                 .testimonials-img-wrapper {
@@ -74,6 +78,7 @@
                         }
                     }
                 }
+                
             }
 
             @media(max-width: 850px){

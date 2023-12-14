@@ -1,0 +1,103 @@
+$theme-color: #ff5035;
+
+#faq-section {
+    padding: 7rem 0;
+    background-image: url('../../images/faq/car.png');
+    background-repeat: no-repeat;
+    background-position-y: 90%;
+
+    .faq-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .faq-title {
+            text-align: center;
+            max-width: 50rem;
+            margin: 0px auto;
+            padding: 0 2rem 2rem 2rem;
+
+            h4 {
+                font-size: 1.5rem;
+
+                @media(max-width: 500px){
+                    font-size: 1rem;
+                } 
+            }
+
+            h2 {
+                font-size: 2.5rem;
+                font-weight: bold;
+                line-height: 1;
+                margin-top: 1rem;
+
+                @media(max-width: 500px){
+                    font-size: 2.2rem;
+                } 
+            }
+
+            p {
+                color: rgb(87, 86, 86);
+                margin-top: 1rem;
+            }
+        }
+
+        .question-answer {
+            display: flex;
+            flex-direction: column;
+            max-width: 60rem;
+            box-shadow: 0 10px 15px 0 rgba(92, 88, 88, 0.719);
+
+            .question-answer-container {
+
+
+                .question {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 1rem 4rem;
+                    color: black;
+                    font-weight: bold;
+                    font-size: 1.2rem;
+                    cursor: pointer;
+                    background-color: white;
+                    border-bottom: 0.5px solid gray;
+
+
+                    @media(max-width: 500px){
+                        font-size: 1rem;
+                        padding: 1rem 2rem;
+                    }
+                }
+
+                .active-question {
+                    background-color: $theme-color;
+                    color: white;
+                    border: none;
+                }
+    
+                .answer {
+                    color: gray;
+                    background-color: white;
+                    max-height: 0;
+                    overflow: hidden;
+                    padding: 0rem 4rem;
+                    transition: 0.3s ease-out;
+                }
+
+                .active-answer {
+                    max-height: 12rem;
+                    padding: 1rem 4rem;
+
+                    @media(max-width: 500px){
+                        max-height: 25rem;
+                    }
+
+                    @media(max-width: 400px){
+                        max-height: 30rem;
+                    }
+                }
+            }
+        }
+    }
+}

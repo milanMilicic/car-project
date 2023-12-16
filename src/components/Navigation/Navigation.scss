@@ -118,6 +118,7 @@ $theme-color: #ff5035;
     align-items: center;
     justify-content: center;
     transition: all 0.6s ease-in-out;
+    z-index: 9999;
 
     &_close {
         position: absolute;

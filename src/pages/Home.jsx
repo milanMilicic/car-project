@@ -6,6 +6,7 @@ import Banner from "../components/Banner/Banner"
 import ChooseUs from "../components/ChooseUs/ChooseUs"
 import Testimonials from "../components/Testimonials/Testimonials"
 import Faq from "../components/FAQ/Faq"
+import Download from "../components/Download/Download"
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
         <ChooseUs />
         <Testimonials />
         <Faq />
+        <Download />
     </>
   )
 }

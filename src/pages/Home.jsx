@@ -7,6 +7,7 @@ import ChooseUs from "../components/ChooseUs/ChooseUs"
 import Testimonials from "../components/Testimonials/Testimonials"
 import Faq from "../components/FAQ/Faq"
 import Download from "../components/Download/Download"
+import Footer from "../components/Footer/Footer"
 
 function Home() {
   return (
@@ -20,6 +21,7 @@ function Home() {
         <Testimonials />
         <Faq />
         <Download />
+        <Footer />
     </>
   )
 }

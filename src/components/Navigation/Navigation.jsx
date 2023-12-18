@@ -22,17 +22,17 @@ function Navigation() {
                 </div>
                 <div className='navigation-links'>
                     <ul>
-                        <li><Link to='/'>Home</Link></li>
-                        <li><Link to='/about'>About</Link></li>
-                        <li><Link to='/vehicle-models'>Vehicle Models</Link></li>
-                        <li><Link to='/testimonials'>Testimonials</Link></li>
-                        <li><Link to='/our-team'>Our Team</Link></li>
-                        <li><Link to='/contact'>Contact</Link></li>
+                        <li><Link to='#hero-section'>Home</Link></li>
+                        <li><Link to='#book-section'>Booking</Link></li>
+                        <li><Link to='#models-section'>Vehicle Models</Link></li>
+                        <li><Link to='#testimonials-section'>Testimonials</Link></li>
+                        <li><Link to='#choose-us-section'>About</Link></li>
+                        <li><Link to='#footer-section'>Contact</Link></li>
                     </ul>
                 </div>
                 <div className='menu-buttons'>
-                    <Link to='/sign-in' id='sign-in'>Sign In</Link>
-                    <Link to='/register' id='register'>Register</Link>
+                    <Link to='#hero-section' id='sign-in'>Sign In</Link>
+                    <Link to='#hero-section' id='register'>Register</Link>
                 </div>
 
                 {/* mobile navbar */}
@@ -47,14 +47,14 @@ function Navigation() {
                     <FaXmark id='close-icon' size={35}/>
                 </div>
                 <ul className='overlay_mobile-navigation-links'>
-                    <li><Link onClick={toggleOverlay} to='/'>Home</Link></li>
-                    <li><Link onClick={toggleOverlay} to='/about'>About</Link></li>
-                    <li><Link onClick={toggleOverlay} to='/vehicle-models'>Vehicle Models</Link></li>
-                    <li><Link onClick={toggleOverlay} to='/testimonials'>Testimonials</Link></li>
-                    <li><Link onClick={toggleOverlay} to='/our-team'>Our Team</Link></li>
-                    <li><Link onClick={toggleOverlay} to='/contact'>Contact</Link></li>
-                    <li><Link onClick={toggleOverlay} to='/sign-in'>Sign In</Link></li>
-                    <li><Link onClick={toggleOverlay} to='/register'>Register</Link></li>
+                    <li><Link onClick={toggleOverlay} to='#hero-section'>Home</Link></li>
+                    <li><Link onClick={toggleOverlay} to='#book-section'>Booking</Link></li>
+                    <li><Link onClick={toggleOverlay} to='#models-section'>Vehicle Models</Link></li>
+                    <li><Link onClick={toggleOverlay} to='#testimonials-section'>Testimonials</Link></li>
+                    <li><Link onClick={toggleOverlay} to='#choose-us-section'>About</Link></li>
+                    <li><Link onClick={toggleOverlay} to='#footer-section'>Contact</Link></li>
+                    <li><Link onClick={toggleOverlay} to='#hero-section'>Sign In</Link></li>
+                    <li><Link onClick={toggleOverlay} to='#hero-section'>Register</Link></li>
                 </ul>
             </div>
         </nav> 

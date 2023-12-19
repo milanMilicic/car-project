@@ -148,13 +148,13 @@ function Book() {
                             <label className="select-title">
                                 <FaRegCalendarPlus /> &nbsp; Pick-Up Date<span>*</span>
                             </label>
-                            <input value={pickUpDate} onChange={(e) => setPickUpDate(e.target.value)} type="date" id='pick-up-date'/>
+                            <input placeholder='Choose date for pick-up' value={pickUpDate} onChange={(e) => setPickUpDate(e.target.value)} type="date" id='pick-up-date'/>
                         </div>
                         <div className="select-box-content">
                             <label className="select-title">
                                 <FaRegCalendarMinus /> &nbsp; Drop-Off Date<span>*</span>
                             </label>
-                            <input value={dropOffDate} onChange={(e) => setDropOffDate(e.target.value)} type="date" id='drop-off-date'/>
+                            <input placeholder='Choose date for drop-off' value={dropOffDate} onChange={(e) => setDropOffDate(e.target.value)} type="date" id='drop-off-date'/>
                         </div>
                         <button type='submit' id='search'>Search</button>
                     </form>
